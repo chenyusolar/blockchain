@@ -36,7 +36,7 @@ const balance1 = ref("0")
 const balance2 = ref("0")
 const gasPrice = ref("0")
 const blockQuery = ref("")
-const blockInfo = ref(null)
+const blockInfo = ref(false)
 
 
 // 链接区块链网络
@@ -99,9 +99,13 @@ async function getBlock() {
     blockInfo.value = block
   } catch (error) {
     console.error("Error fetching block information:", error)
-    blockInfo.value = null
+    blockInfo.value = false
+  }
+  if (blockInfo == null) {
+     blockInfo.value = false
   }
   console.log(blockInfo.value)
+
   //console.log("---"+ blockInfo.value+ "---")
 }
 
