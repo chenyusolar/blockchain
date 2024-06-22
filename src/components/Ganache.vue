@@ -19,7 +19,16 @@
   <h1>Block Information</h1>
   <div v-if="blockInfo">
     <h2>Block Information</h2>
-    <pre> BaseFeePerGas:  {{ blockInfo.value.baseFeePerGas }}</pre>
+    <pre> Block #:  {{ blockInfo.number }}</pre>
+    <pre> BaseFeePerGas:  {{ blockInfo.baseFeePerGas }}</pre>
+    <pre> Diffculty:  {{ blockInfo.diffculty }}</pre>
+    <pre> ExtraData:  {{ blockInfo.extraData }}</pre>
+    <pre> GasLimit:  {{ blockInfo.gasLimit }}</pre>
+    <pre> GasUsed:  {{ blockInfo.gasUsed }}</pre>
+    <pre> Hash:  {{ blockInfo.hash }}</pre>
+    <pre> LogsBloom:  {{ blockInfo.logsBloom }}</pre>
+    <pre> Miner:  {{ blockInfo.miner }}</pre>
+    <pre> MixHash:  {{ blockInfo.mixHash }}</pre>
   </div>
 
 </template>
@@ -29,8 +38,8 @@ import { ref, onMounted } from "vue"
 import Web3 from "web3"
 
 const transferAmount = ref("")
-const transferFrom = ref("0xDEE459Df8e068a1B4C41f4B13c590af03f2bb21D")  // 默认值可改为任意账户
-const transferTo = ref("0x2EFe9e96Fdb75B7C9b8f4802DB68624238920bB6")  // 默认值可改为任意账户
+const transferFrom = ref("0xBAaC92A2577c815EB69Ce1689C29D63835203900")  // 默认值可改为任意账户
+const transferTo = ref("0x41f4c3DEAA86e4163C1209971785253ff392d964")  // 默认值可改为任意账户
 
 const balance1 = ref("0")
 const balance2 = ref("0")
