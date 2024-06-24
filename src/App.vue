@@ -1,11 +1,14 @@
 <script setup lang="ts">
 // import Wallet from './components/Wallet.vue'
-import Ganache from './components/Ganache.vue'
+// import Ganache from './components/Ganache.vue'
+// import Bnb from './components/Bnb.vue'
+// import Sol from './components/Solana.vue'
+import Bitcoin from './components/Bitcoin.vue'
 </script>
 
 <template>
   <div id="app">
-    <Ganache />
+    <Bitcoin />
   </div>
 </template>
 
